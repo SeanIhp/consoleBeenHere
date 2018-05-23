@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace命名空间，作用就是对sql进行分类化管理，理解sql隔离 
+注意：使用mapper代理方法开发，namespace有特殊重要的作用，namespace等于mapper接口地址
+-->
+<mapper namespace="cn.com.beenhere.core.storage.mybatis.mapper.AccountMapper">
+
+	<sql id="queryCommon">
+		<if test="id != null">
+			AND id = #{id} 
+		</if>
+		<if test="aid != null">
+			AND id = #{aid} 
+		</if>
+		<if test="serial_id != null">
+			AND id = #{id} 
+		</if>
+		<if test="wxOpenId != null">
+			AND wx_openid = #{wxOpenId} 
+		</if>
+		<if test="wxUnionId != null">
+			AND wx_unionid = #{wxUnionId} 
+		</if>
+		<if test="wxNickname != null">
+			AND wx_nickname LIKE "%"#{wxNickname}"%" 
+		</if>
+		<if test="wxAvatar != null">
+			AND wx_avatar = #{wxAvatar} 
+		</if>
+		<if test="wxGender != null">
+			AND wx_gender = #{$wxGender} 
+		</if>
+		<if test="wxCity != null">
+			AND wx_city LIKE "%"#{wxCity}"%" 
+		</if>
+		<if test="wxProvince != null">
+			AND wx_province = #{wxProvince} 
+		</if>
+		<if test="wxCountry != null">
+			AND wx_country = #{wxCountry} 
+		</if>
+		<if test="wxLanguage != null">
+			AND wx_language = #{wxLanguage} 
+		</if>
+		<if test="phoneNumber != null">
+			AND phoneNumber = #{phoneNumber} 
+		</if>
+		<if test="score != null">
+			AND score = #{score} 
+		</if>
+		<if test="score_min != null">
+			<![CDATA[				
+			AND score >= #{score_min} 
+			]]> 
+		</if>
+		<if test="score_max != null">
+			<![CDATA[				
+			AND score < #{score_max} 
+			]]> 
+		</if>
+		<if test="actScore != null">
+			AND actScore = #{actScore} 
+		</if>
+		<if test="actScore_min != null">
+			<![CDATA[				
+			AND actScore >= #{actScore_min} 
+			]]> 
+		</if>
+		<if test="actScore_max != null">
+			<![CDATA[				
+			AND actScore < #{actScore_max} 
+			]]> 
+		</if>
+		<if test="status != null">
+			AND status = #{status} 
+		</if>
+		<if test="status_min != null">
+			<![CDATA[				
+			AND status >= #{status_min} 
+			]]> 
+		</if>
+		<if test="status_max != null">
+			<![CDATA[				
+			AND status < #{status_max} 
+			]]> 
+		</if>
+	</sql>
+	
+	
+	
+	<sql id="updateFields">
+		<if test="phoneNumber != null">
+			phoneNumber = #{phoneNumber},
+		</if>
+		<if test="score != null">
+			score = #{score},
+		</if>
+		<if test="status != null">
+			status = #{status},
+		</if>
+	</sql>
+	
+
+
+
+	<insert id="regist" parameterType="cn.com.beenhere.core.storage.mybatis.orm.Account">
+		INSERT INTO account(
+			aid, 
+			serial_id,
+			username,
+			password,
+			mailbox,			
+			theType,
+			phoneNumber,
+			score,
+			actScore,
+			createTime,
+			status
+		) VALUES (
+			#{aid},
+			#{serial_id},
+			#{username},
+			#{password},
+			#{mailbox},
+			#{theType},
+			#{phoneNumber},
+			#{score},
+			#{actScore},
+			#{createTime},
+			#{status}
+		)
+	</insert>
+	
+
+
+
+	<insert id="add" parameterType="cn.com.beenhere.core.storage.mybatis.orm.Account">
+		INSERT INTO account(
+			id, 
+			serial_id
+			wx_openid, 
+			wx_sessionkey,
+			wx_unionid,
+			wx_nickname,
+			wx_avatar,
+			wx_gender,
+			wx_city,
+			wx_country,
+			wx_province,
+			wx_language,
+			theType,
+			phoneNumber,
+			score,
+			actScore,
+			createTime,
+			status
+		) VALUES (
+			#{id},
+			#{serialId},
+			#{wxOpenId},
+			#{wxSessionKey},
+			#{wxUnionId},
+			#{wxNickname},
+			#{wxAvatarUrl},
+			#{wxGender},
+			#{wxCity},
+			#{wxCountry},
+			#{wxProvince},
+			#{wxLanguage},
+			#{theType},
+			#{phoneNumber},
+			#{score},
+			#{actScore},
+			#{createTime},
+			#{status}
+		)
+	</insert>
+	
+	
+	
+	<delete id="removeById" parameterType="string">
+		DELETE 
+		FROM 
+			account 
+		WHERE 
+			id = #{id}
+	</delete>
+	
+	
+	
+	<delete id="remove" parameterType="java.util.HashMap">
+		DELETE 
+		FROM 
+			account 
+		<where>
+			<include refid="queryCommon"/>
+		</where>
+	</delete>
+	
+	
+	
+	<update id="update" parameterType="java.util.HashMap">
+		UPDATE 
+			account
+		<set>
+			<include refid="updateFields"/>
+		</set>
+		<where>
+			<include refid="queryCommon"/>
+		</where>
+	</update>
+	
+	
+	
+	<select id="get" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+		SELECT 
+			${fields} 
+		FROM 
+			account 
+		<where>
+			<include refid="queryCommon"/>
+		</where>
+	</select>
+	
+	
+	
+	<select id="getCount" parameterType="java.util.HashMap" resultType="long">
+		SELECT 
+			count(id)
+		FROM 
+			account 
+		<where>
+			<include refid="queryCommon"/>
+		</where>
+	</select>
+	
+	
+	<!-- <select id="list" parameterType="java.util.HashMap" resultType="cn.com.beenhere.core.storage.mybatis.orm.Account"> -->
+	<select id="list" parameterType="java.util.HashMap" resultType="cn.com.beenhere.core.storage.mybatis.orm.Account">
+		SELECT 
+			${fields}
+		FROM
+			account
+		<where>
+			<include refid="queryCommon"/>
+		</where>
+	</select>
+	
+	
+	
+	<select id="getOnLogin" parameterType="java.util.HashMap" resultType="cn.com.beenhere.core.storage.mybatis.orm.Account">
+		SELECT 
+			* 
+		FROM 
+			account 
+		WHERE
+			username = #{username}
+			AND
+			theType = #{theType}
+	</select>
+	
+	
+	
+</mapper>
