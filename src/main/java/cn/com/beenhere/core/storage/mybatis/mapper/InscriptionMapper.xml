@@ -12,8 +12,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="id != null">
 			AND id = #{id} 
 		</if>
-		<if test="serial_id != null">
-			AND id = #{id} 
+		<if test="serialId != null">
+			AND serialId = #{serialId} 
 		</if>
 		<if test="accountId != null">
 			AND account_id = #{accountId} 
@@ -99,7 +99,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="add" parameterType="Inscription">
 		INSERT INTO inscription(
 			id, 
-			serial_id
+			serialId
 			account_id, 
 			wx_latitude,
 			wx_longitude,

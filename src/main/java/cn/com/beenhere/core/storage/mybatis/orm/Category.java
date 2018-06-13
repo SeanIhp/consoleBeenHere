@@ -5,14 +5,14 @@ import java.util.Date;
 
 public class Category implements Serializable {
 	private static final long serialVersionUID = -602934776952939772L;
-	public static String DEFAULT_ALL_FIELDS = "id, cid, serial_id, "
+	public static String DEFAULT_ALL_FIELDS = "id, cid, serialId, "
 			+ "name, code, icon, intro, level, asRoot, hasChild, "
 			+ "sequenceNumber, rootId, rootCid, parentId, parentCid, "
 			+ "createTime, status";
 	
 	private Long			id;
 	private String			cid;
-	private String			serial_id;
+	private String			serialId;
 	private String			name;
 	private String			code;
 	private String			icon;
@@ -40,11 +40,11 @@ public class Category implements Serializable {
 	public void setCid(String cid) {
 		this.cid = cid;
 	}
-	public String getSerial_id() {
-		return serial_id;
+	public String getSerialId() {
+		return serialId;
 	}
-	public void setSerial_id(String serial_id) {
-		this.serial_id = serial_id;
+	public void setSerialId(String serialId) {
+		this.serialId = serialId;
 	}
 	public String getName() {
 		return name;

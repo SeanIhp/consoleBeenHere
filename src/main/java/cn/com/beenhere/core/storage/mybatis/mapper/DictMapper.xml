@@ -15,14 +15,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="did != null">
 			AND did = #{did} 
 		</if>
-		<if test="serial_id != null">
-			AND serial_id = #{serialId} 
+		<if test="serialId != null">
+			AND serialId = #{serialId} 
 		</if>
-		<if test="dict_group_id != null">
-			AND dict_group_id = #{dictGroupId} 
+		<if test="dictGroup_id != null">
+			AND dictGroup_id = #{dictGroupId} 
 		</if>
-		<if test="dict_group_id != null">
-			AND dict_group_dgid = #{dictGroupDgid} 
+		<if test="dictGroup_id != null">
+			AND dictGroup_dgid = #{dictGroupDgid} 
 		</if>
 		<if test="name != null">
 			AND name = #{name} 
@@ -30,20 +30,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="code != null">
 			AND code = #{code} 
 		</if>
-		<if test="const_code != null">
-			AND const_code = #{constCode} 
+		<if test="constCode != null">
+			AND constCode = #{constCode} 
 		</if>
-		<if test="const_type != null">
-			AND const_type = #{constType} 
+		<if test="constType != null">
+			AND constType = #{constType} 
 		</if>
-		<if test="const_value != null">
-			AND const_value = #{constValue} 
+		<if test="constValue != null">
+			AND constValue = #{constValue} 
 		</if>
-		<if test="const_text != null">
-			AND const_text = #{constText} 
+		<if test="constText != null">
+			AND constText = #{constText} 
 		</if>
-		<if test="sort_no != null">
-			AND sort_no = #{sortNo} 
+		<if test="sortNo != null">
+			AND sortNo = #{sortNo} 
 		</if>
 		<if test="level != null">
 			AND level = #{level} 
@@ -75,20 +75,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="code != null">
 			code = #{code} ,
 		</if>
-		<if test="const_code != null">
-			const_code = #{constCode} ,
+		<if test="constCode != null">
+			constCode = #{constCode} ,
 		</if>
-		<if test="const_type != null">
-			const_type = #{constType} ,
+		<if test="constType != null">
+			constType = #{constType} ,
 		</if>
-		<if test="const_value != null">
-			const_value = #{constValue} ,
+		<if test="constValue != null">
+			constValue = #{constValue} ,
 		</if>
-		<if test="const_text != null">
-			const_text = #{constText} ,
+		<if test="constText != null">
+			constText = #{constText} ,
 		</if>
-		<if test="sort_no != null">
-			sort_no = #{sortNo} ,
+		<if test="sortNo != null">
+			sortNo = #{sortNo} ,
 		</if>
 		<if test="level != null">
 			level = #{level} ,
@@ -107,16 +107,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="add" parameterType="cn.com.beenhere.core.storage.mybatis.orm.Dict">
 		INSERT INTO account(
 			did,
-			serial_id,
-			dict_group_id,
-			dict_group_dgid,
+			serialId,
+			dictGroup_id,
+			dictGroup_dgid,
 			name,
 			code, 
-			const_code,
-			const_type, 
-			const_value,
-			const_text,
-			sort_no,
+			constCode,
+			constType, 
+			constValue,
+			constText,
+			sortNo,
 			level,
 			description,
 			createTime,
@@ -128,11 +128,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{dictGroupDgid},
 			#{name},
 			#{code},
-			#{const_code},
-			#{const_type},
-			#{const_value},
-			#{const_text},
-			#{sort_no},
+			#{constCode},
+			#{constType},
+			#{constValue},
+			#{constText},
+			#{sortNo},
 			#{level},
 			#{description},
 			#{createTime},
@@ -227,7 +227,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		FROM 
 			dict 
 		WHERE
-			dict_group_id = #{dictGroupId}
+			dictGroup_id = #{dictGroupId}
 	</select>
 	
 	

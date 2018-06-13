@@ -7,7 +7,7 @@ public class Inscription extends Entity implements Serializable {
 	private static final long serialVersionUID = -4418438010618735199L;
 	
 	private Long			id;						//
-	private String			serial_id;				//
+	private String			serialId;				//
 	private Long			account_id;
 	private Float			wx_latitude;
 	private Float			wx_longitude;
@@ -33,12 +33,12 @@ public class Inscription extends Entity implements Serializable {
 		this.id = id;
 	}
 
-	public String getSerial_id() {
-		return serial_id;
+	public String getSerialId() {
+		return serialId;
 	}
 
-	public void setSerial_id(String serial_id) {
-		this.serial_id = serial_id;
+	public void setSerialId(String serialId) {
+		this.serialId = serialId;
 	}
 
 	public Long getAccount_id() {
