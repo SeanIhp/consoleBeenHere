@@ -36,7 +36,7 @@ public class AccountController {
 		ResultObject ro = new ResultObject();
 		try {
 			account.setAid(ID.newId(IhpConfig.ID_USER__$USERACCOUNT, IhpConfig.ID_GENERATOR_DATA_DATABASE_CODE, IhpConfig.ID_GENERATOR_DATA_TABLE_CODE));
-			account.setSerial_id(ID.newUuid());
+			account.setSerialId(ID.newUuid());
 			if( !DataValidator.isNull(account.getPassword()) ){
 				account.setPassword( Sha256.encode(new Md5().getMd5String(account.getPassword())) );
 			}
