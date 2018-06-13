@@ -15,8 +15,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="mid != null">
 			AND mid = #{mid} 
 		</if>
-		<if test="serial_id != null">
-			AND serial_id = #{serialId} 
+		<if test="serialId != null">
+			AND serialId = #{serialId} 
 		</if>
 		<if test="cid != null">
 			AND cid = #{cd} 
@@ -83,7 +83,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="add" parameterType="cn.com.beenhere.core.storage.mybatis.orm.Merchant">
 		INSERT INTO merchant(
 			mid, 
-			serial_id, 
+			serialId, 
 			cid, 
 			category_id, 
 			name, 
@@ -94,7 +94,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			status
 		) VALUES (
 			#{mid},
-			#{serial_id},
+			#{serialId},
 			#{cid},
 			#{category_id},
 			#{name},

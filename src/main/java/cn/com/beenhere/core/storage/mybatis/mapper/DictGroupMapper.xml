@@ -15,8 +15,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="dgid != null">
 			AND id = #{dgid} 
 		</if>
-		<if test="serial_id != null">
-			AND serial_id = #{serialId} 
+		<if test="serialId != null">
+			AND serialId = #{serialId} 
 		</if>
 		<if test="code != null">
 			AND code = #{code} 
@@ -30,8 +30,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="sname != null">
 			AND sname = #{sname} 
 		</if>
-		<if test="theType != null">
-			AND theType = #{theType} 
+		<if test="type != null">
+			AND type = #{type} 
 		</if>
 		<if test="hasChild != null">
 			AND hasChild = #{hasChild} 
@@ -39,8 +39,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="level != null">
 			AND level = #{level} 
 		</if>
-		<if test="parent_id != null">
-			AND parent_id = #{parentId} 
+		<if test="parentId != null">
+			AND parentId = #{parentId} 
 		</if>
 		<if test="description != null">
 			AND description LIKE "%"#{description}"%" 
@@ -75,8 +75,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="sname != null">
 			sname = #{sname} ,
 		</if>
-		<if test="theType != null">
-			theType = #{theType} ,
+		<if test="type != null">
+			type = #{type} ,
 		</if>
 		<if test="hasChild != null">
 			hasChild = #{hasChild} ,
@@ -84,8 +84,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="level != null">
 			level = #{level} ,
 		</if>
-		<if test="parent_id != null">
-			parent_id = #{parentId} ,
+		<if test="parentId != null">
+			parentId = #{parentId} ,
 		</if>
 		<if test="description != null">
 			description = #{description} ,
@@ -101,15 +101,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="add" parameterType="cn.com.beenhere.core.storage.mybatis.orm.DictGroup">
 		INSERT INTO account(
 			dgid,
-			serial_id,
+			serialId,
 			code, 
 			name,
 			scode, 
 			sname,
-			theType,
+			type,
 			hasChild, 
 			level,
-			parent_id,
+			parentId,
 			description,
 			createTime,
 			status
@@ -120,7 +120,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{name},
 			#{scode},
 			#{sname},
-			#{theType},
+			#{type},
 			#{hasChild},
 			#{level},
 			#{parentId},

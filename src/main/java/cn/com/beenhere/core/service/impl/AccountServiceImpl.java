@@ -27,7 +27,7 @@ public class AccountServiceImpl implements AccountService {
 	public Account login(Account account) throws DaoException{
 		Map<String, Object> param = new HashMap();
 		param.put("username", account.getUsername());
-		param.put("theType", account.getTheType());
+		param.put("type", account.getType());
 		Account theAccount = accountMapper.getOnLogin(param);
 		System.out.println("~~~~~~~~~~~theAccount: " + theAccount);
 		if(theAccount!=null){

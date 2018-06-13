@@ -9,7 +9,7 @@
 		<![CDATA[
 			INSERT INTO account(
 				aid,
-				serial_id,
+				serialId,
 				username,
 				password,
 				mailbox,
@@ -39,7 +39,7 @@
 		<![CDATA[
 			INSERT INTO account(
 				aid,
-				serial_id,
+				serialId,
 				username,
 				password,
 				mailbox,
@@ -53,6 +53,7 @@
 				wx_country,
 				wx_province,
 				wx_language,
+				type,
 				phoneNumber,
 				score,
 				actScore,
@@ -73,6 +74,7 @@
 				#{wxCountry},
 				#{wxProvince},
 				#{wxLanguage},
+				#{type},
 				#{phoneNumber},
 				#{score},
 				#{actScore},

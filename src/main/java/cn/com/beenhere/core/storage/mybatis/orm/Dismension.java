@@ -7,7 +7,7 @@ public class Dismension extends Entity implements Serializable {
 	private static final long serialVersionUID = -7220792689633672638L;
 	
 	private Long			id;						//
-	private String			serial_id;				//
+	private String			serialId;				//
 	private Long			account_id;				//
 	private String			name;					//
 	private String			code;					//
@@ -27,11 +27,11 @@ public class Dismension extends Entity implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getSerial_id() {
-		return serial_id;
+	public String getSerialId() {
+		return serialId;
 	}
-	public void setSerial_id(String serial_id) {
-		this.serial_id = serial_id;
+	public void setSerialId(String serialId) {
+		this.serialId = serialId;
 	}
 	public Long getAccount_id() {
 		return account_id;

@@ -9,12 +9,12 @@ import java.sql.Timestamp;
 
 public class Account extends Entity implements Serializable {
 	private static final long serialVersionUID = -7450117829974407869L;
-	public static final String DEFAULT_ALL_FIELDS = "id, aid, serial_id, username, password"
+	public static final String DEFAULT_ALL_FIELDS = "id, aid, serialId, username, password, "
 			+ "wx_openid, wx_sessionkey, "
 			+ "wx_unionid, wx_nickname, "
 			+ "wx_avatar, wx_gender, wx_city, "
 			+ "wx_country, wx_province, wx_language, "
-			+ "theType, phoneNumber, score, status";
+			+ "type, phoneNumber, score, status";
 	public static final Integer 	STATUS_DEFAULT = 1;					//正常
 	public static final Integer 	STATUS_LOCK = 2;					//交互锁
 	public static final Integer 	STATUS_DENY = 3;					//拒绝服务
@@ -22,7 +22,7 @@ public class Account extends Entity implements Serializable {
 	
 	private Long			id;						//
 	private String			aid;				//
-	private String			serial_id;				//
+	private String			serialId;				//
 	private String			username;				//
 	private String			password;				//
 	private String			mailbox;
@@ -36,7 +36,7 @@ public class Account extends Entity implements Serializable {
 	private String			wx_country;				//
 	private String			wx_province;			//
 	private String			wx_language;			//
-	private Integer			theType; 
+	private Integer			type; 
 	private String			phoneNumber;			//电话号码
 	private Long			score;					//积分
 	private Long			actScore;				//活跃分
@@ -58,11 +58,11 @@ public class Account extends Entity implements Serializable {
 	public void setAid(String aid) {
 		this.aid = aid;
 	}
-	public String getSerial_id() {
-		return serial_id;
+	public String getSerialId() {
+		return serialId;
 	}
-	public void setSerial_id(String serial_id) {
-		this.serial_id = serial_id;
+	public void setSerialId(String serialId) {
+		this.serialId = serialId;
 	}
 	public String getUsername() {
 		return username;
@@ -142,11 +142,11 @@ public class Account extends Entity implements Serializable {
 	public void setWx_language(String wx_language) {
 		this.wx_language = wx_language;
 	}
-	public Integer getTheType() {
-		return theType;
+	public Integer getType() {
+		return type;
 	}
-	public void setTheType(Integer theType) {
-		this.theType = theType;
+	public void setTheType(Integer type) {
+		this.type = type;
 	}
 	public String getPhoneNumber() {
 		return phoneNumber;

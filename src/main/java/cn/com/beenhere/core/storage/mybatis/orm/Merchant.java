@@ -6,13 +6,13 @@ import java.util.Date;
 public class Merchant implements Serializable {
 	private static final long serialVersionUID = -675690559693210692L;
 
-	public static String DEFAULT_ALL_FIELDS = "id, mid, serial_id, "
+	public static String DEFAULT_ALL_FIELDS = "id, mid, serialId, "
 			+ "cid, category_id, code, name, "
 			+ "intro, website, createTime, status";
 	
 	private Long			id;
 	private String			mid;
-	private String			serial_id;
+	private String			serialId;
 	private	Long			cid;
 	private String			category_id;
 	private String			code;
@@ -34,11 +34,11 @@ public class Merchant implements Serializable {
 	public void setMid(String mid) {
 		this.mid = mid;
 	}
-	public String getSerial_id() {
-		return serial_id;
+	public String getSerialId() {
+		return serialId;
 	}
-	public void setSerial_id(String serial_id) {
-		this.serial_id = serial_id;
+	public void setSerialId(String serialId) {
+		this.serialId = serialId;
 	}
 	public Long getCid() {
 		return cid;

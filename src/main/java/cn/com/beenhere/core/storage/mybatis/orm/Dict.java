@@ -5,24 +5,24 @@ import java.util.Date;
 
 public class Dict implements Serializable {
 	private static final long serialVersionUID = -602934776952939772L;
-	public static String DEFAULT_ALL_FIELDS = "id, did, serial_id, "
-			+ "dict_group_id, dict_group_dgid, "
-			+ "name, code, const_code, const_type, "
-			+ "const_value, const_text, sort_no, level, "
+	public static String DEFAULT_ALL_FIELDS = "id, did, serialId, "
+			+ "dictGroup_id, dictGroup_dgid, "
+			+ "name, code, constCode, constType, "
+			+ "constValue, constText, sortNo, level, "
 			+ "description, createTime, status";
 	
 	private Long			id;
 	private String			did;
-	private String			serial_id;
-	private	Long			dict_group_id;
-	private String			dict_group_dgid;
+	private String			serialId;
+	private	Long			dictGroup_id;
+	private String			dictGroup_dgid;
 	private String			name;
 	private String			code;
-	private String			const_code;
-	private String			const_type;
-	private String			const_value;
-	private String			const_text;
-	private String			sort_no;
+	private String			constCode;
+	private String			constType;
+	private String			constValue;
+	private String			constText;
+	private String			sortNo;
 	private Integer			level;
 	private String			description;
 	private Date			createTime;
@@ -40,23 +40,23 @@ public class Dict implements Serializable {
 	public void setDid(String did) {
 		this.did = did;
 	}
-	public String getSerial_id() {
-		return serial_id;
+	public String getSerialId() {
+		return serialId;
 	}
-	public void setSerial_id(String serial_id) {
-		this.serial_id = serial_id;
+	public void setSerialId(String serialId) {
+		this.serialId = serialId;
 	}
-	public Long getDict_group_id() {
-		return dict_group_id;
+	public Long getDictGroup_id() {
+		return dictGroup_id;
 	}
-	public void setDict_group_id(Long dict_group_id) {
-		this.dict_group_id = dict_group_id;
+	public void setDictGroup_id(Long dictGroup_id) {
+		this.dictGroup_id = dictGroup_id;
 	}
-	public String getDict_group_dgid() {
-		return dict_group_dgid;
+	public String getDictGroup_dgid() {
+		return dictGroup_dgid;
 	}
-	public void setDict_group_dgid(String dict_group_dgid) {
-		this.dict_group_dgid = dict_group_dgid;
+	public void setDictGroup_dgid(String dictGroup_dgid) {
+		this.dictGroup_dgid = dictGroup_dgid;
 	}
 	public String getCode() {
 		return code;
@@ -70,35 +70,35 @@ public class Dict implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getConst_code() {
-		return const_code;
+	public String getConstCode() {
+		return constCode;
 	}
-	public void setConst_code(String const_code) {
-		this.const_code = const_code;
+	public void setConstCode(String constCode) {
+		this.constCode = constCode;
 	}
-	public String getConst_type() {
-		return const_type;
+	public String getConstType() {
+		return constType;
 	}
-	public void setConst_type(String const_type) {
-		this.const_type = const_type;
+	public void setConstType(String constType) {
+		this.constType = constType;
 	}
-	public String getConst_value() {
-		return const_value;
+	public String getConstValue() {
+		return constValue;
 	}
-	public void setConst_value(String const_value) {
-		this.const_value = const_value;
+	public void setConstValue(String constValue) {
+		this.constValue = constValue;
 	}
-	public String getConst_text() {
-		return const_text;
+	public String getConstText() {
+		return constText;
 	}
-	public void setConst_text(String const_text) {
-		this.const_text = const_text;
+	public void setConstText(String constText) {
+		this.constText = constText;
 	}
-	public String getSort_no() {
-		return sort_no;
+	public String getSortNo() {
+		return sortNo;
 	}
-	public void setSort_no(String sort_no) {
-		this.sort_no = sort_no;
+	public void setSortNo(String sortNo) {
+		this.sortNo = sortNo;
 	}
 	public Integer getLevel() {
 		return level;

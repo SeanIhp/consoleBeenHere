@@ -5,13 +5,13 @@ import java.util.Date;
 
 public class Store implements Serializable {
 	private static final long serialVersionUID = -602934776952939772L;
-	public static String DEFAULT_ALL_FIELDS = "id, sid, serial_id, "
+	public static String DEFAULT_ALL_FIELDS = "id, sid, serialId, "
 			+ "mid, merchant_id, name, code, intro, "
 			+ "wx_latitude, wx_longitude, createTime, status";
 	
 	private Long			id;
 	private String			sid;
-	private String			serial_id;
+	private String			serialId;
 	private Long			mid;
 	private String			merchant_id;
 	private String			name;
@@ -34,11 +34,11 @@ public class Store implements Serializable {
 	public void setSid(String sid) {
 		this.sid = sid;
 	}
-	public String getSerial_id() {
-		return serial_id;
+	public String getSerialId() {
+		return serialId;
 	}
-	public void setSerial_id(String serial_id) {
-		this.serial_id = serial_id;
+	public void setSerialId(String serialId) {
+		this.serialId = serialId;
 	}
 	public Long getMid() {
 		return mid;
