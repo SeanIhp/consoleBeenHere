@@ -23,7 +23,6 @@ public class Dict implements Serializable {
 	private String			constValue;
 	private String			constText;
 	private String			sortNo;
-	private Integer			level;
 	private String			description;
 	private Date			createTime;
 	private Integer			status;
@@ -99,12 +98,6 @@ public class Dict implements Serializable {
 	}
 	public void setSortNo(String sortNo) {
 		this.sortNo = sortNo;
-	}
-	public Integer getLevel() {
-		return level;
-	}
-	public void setLevel(Integer level) {
-		this.level = level;
 	}
 	public String getDescription() {
 		return description;

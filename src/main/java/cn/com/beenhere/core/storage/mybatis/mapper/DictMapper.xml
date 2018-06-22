@@ -45,9 +45,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="sortNo != null">
 			AND sortNo = #{sortNo} 
 		</if>
-		<if test="level != null">
-			AND level = #{level} 
-		</if>
 		<if test="description != null">
 			AND description LIKE "%"#{description}"%" 
 		</if>
@@ -90,9 +87,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="sortNo != null">
 			sortNo = #{sortNo} ,
 		</if>
-		<if test="level != null">
-			level = #{level} ,
-		</if>
 		<if test="description != null">
 			description = #{description} ,
 		</if>
@@ -117,7 +111,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			constValue,
 			constText,
 			sortNo,
-			level,
 			description,
 			createTime,
 			status
@@ -133,7 +126,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{constValue},
 			#{constText},
 			#{sortNo},
-			#{level},
 			#{description},
 			#{createTime},
 			#{status}
