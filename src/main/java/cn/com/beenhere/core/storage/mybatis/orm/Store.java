@@ -6,7 +6,8 @@ import java.util.Date;
 public class Store implements Serializable {
 	private static final long serialVersionUID = -602934776952939772L;
 	public static String DEFAULT_ALL_FIELDS = "id, sid, serialId, "
-			+ "mid, merchant_id, name, code, intro, "
+			+ "mid, merchant_id, aid, account_id, "
+			+ "cid, category_id, name, code, intro, "
 			+ "wx_latitude, wx_longitude, createTime, status";
 	
 	private Long			id;
@@ -14,6 +15,10 @@ public class Store implements Serializable {
 	private String			serialId;
 	private Long			mid;
 	private String			merchant_id;
+	private Long			aid;
+	private String			account_id;
+	private Long			cid;
+	private String			category_id;
 	private String			name;
 	private String			code;
 	private String			intro;
@@ -39,6 +44,30 @@ public class Store implements Serializable {
 	}
 	public void setSerialId(String serialId) {
 		this.serialId = serialId;
+	}
+	public Long getAid() {
+		return aid;
+	}
+	public void setAid(Long aid) {
+		this.aid = aid;
+	}
+	public String getAccount_id() {
+		return account_id;
+	}
+	public void setAccount_id(String account_id) {
+		this.account_id = account_id;
+	}
+	public Long getCid() {
+		return cid;
+	}
+	public void setCid(Long cid) {
+		this.cid = cid;
+	}
+	public String getCategory_id() {
+		return category_id;
+	}
+	public void setCategory_id(String category_id) {
+		this.category_id = category_id;
 	}
 	public Long getMid() {
 		return mid;

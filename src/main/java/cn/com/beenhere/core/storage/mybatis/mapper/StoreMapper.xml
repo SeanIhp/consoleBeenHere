@@ -24,6 +24,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<if test="merchant_id != null">
 			AND merchant_id = #{merchantId} 
 		</if>
+		<if test="aid != null">
+			AND aid = #{aid} 
+		</if>
+		<if test="account_id != null">
+			AND account_id = #{accountId} 
+		</if>
+		<if test="cid != null">
+			AND cid = #{cid} 
+		</if>
+		<if test="category_id != null">
+			AND category_id = #{categoryId} 
+		</if>
 		<if test="name != null">
 			AND name = #{name} 
 		</if>
@@ -86,6 +98,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			serialId,
 			mid,
 			merchant_id,
+			aid,
+			account_id,
+			cid,
+			category_id,
 			name,
 			code, 
 			intro,
@@ -98,6 +114,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			#{serialId},
 			#{mid},
 			#{merchantId},
+			#{aid},
+			#{accountId},
+			#{cid},
+			#{categoryId},
 			#{name},
 			#{code},
 			#{intro},
